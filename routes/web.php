@@ -17,4 +17,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
  
-Route::get('/', "HomeController@GiovanniMucciaccia");
+Route::get('/', "MovieController@index");
+Route::get('/home', "HomeController@index");
+Route::get('/contacts', "HomeController@contacts");
