@@ -1,15 +1,15 @@
 @extends('layouts.main')
 
 @section('title')
-    Movies
+    Trains
 @endsection
 
 @section('main-content')
     <div class="row">
-        @forelse ($movies as $movie)
-            @include('partials.movies.card')
+        @forelse ($trains as $train)
+            @include('partials.trains.card')
         @empty
-            <p>No Movies</p>
+            <p>No Trains</p>
         @endforelse
     </div>
 @endsection

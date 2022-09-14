@@ -6,9 +6,10 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="{{ route('homepage') }}">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link active" href="{{ route('/') }}">Home <span class="sr-only">(current)</span></a>
             <a class="nav-item nav-link" href="{{ route('contacts') }}">Contacts</a>
             <a class="nav-item nav-link" href="{{ route('movies') }}">Movies</a>
+            <a class="nav-item nav-link" href="{{ route('trains') }}">Trains</a>
           </div>
         </div>
       </nav>
