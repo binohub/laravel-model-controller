@@ -9,12 +9,16 @@ const mix = require('laravel-mix');
      composer create-project --prefer-dist laravel/laravel:^7.0 .
 
 
+
+
  |installa l'essenziale
      npm install | npm bootstrap | npm run watch
      composer install | php artisan serve
  |importa il database e dopodichè assicurati di gestire le credenziali nel file .env
  |qualora dovessi utilizzare i link all'interno di css è buona norma implementare il .options sul webpack.mix.js
      .options({ processCssUrls: false});
+
+
 
 
  |crea un model (app->http->providers) ed un controller (app->http->controllers) 
@@ -29,8 +33,10 @@ const mix = require('laravel-mix');
  | una volta creato il Model con il controller possiamo agire sui dati direttamente!
      $movies = Movie::all();
 
-     
+
  |front end crea una cartella partials con footer e header un main layout 
+
+
 
 
 
@@ -46,16 +52,25 @@ const mix = require('laravel-mix');
      composer require doctrine/dbal:2.12.1
 
 
+
+
+
  |con i seeders popoliamo il db (database->seeds)
      php artisan make:seeder NomeDelSeeder
  |importare i model (almeno il model della tabella che sto seedando)
  |esegui il seeder oppure inserisco il nome dei seeder in databaseseeder.php nell'ordine più opportuno
      php artisan db:seed --class=DirectorsTableSeeder (individuale)
      php artisan db:seed (collettivo)
- |
- |
- |
- |
+  
+
+
+ |fakerphp
+ |rimuoviamo la vecchia versione e importiamo la versione corretta (faker ha una documentazione )
+     remove fzaninotto/faker
+     composer require fakerphp/faker
+ |inserisci nei seeds
+     use Faker\Generator as Faker
+ |implementare nel run(Faker $faker) e usare il ciclo for con i dati da ripetere
  |
  |
  |
